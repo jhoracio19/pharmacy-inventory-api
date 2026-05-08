@@ -1,7 +1,5 @@
 # Pharmacy Inventory API - Core Backend
 
-Este repositorio contiene el módulo de inventario y catálogo para el sistema de farmacia, desarrollado bajo los estándares de JH Dev Agency. 
-
 El sistema está diseñado con una arquitectura orientada a servicios (desacoplada). Utiliza UUIDs como identificadores principales para permitir la futura integración de microservicios externos (como módulos de ventas o analíticas) sin comprometer la integridad referencial de la base de datos.
 
 ## Requisitos Previos
