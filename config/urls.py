@@ -6,7 +6,7 @@ from rest_framework.routers import DefaultRouter
 from catalog.views import MedicineViewSet
 from inventory.views import StockViewSet
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
-from sales.views import SaleViewSet
+from sales.views import SaleViewSet, login_view
 
 # Enrutador automático de DRF
 router = DefaultRouter()
@@ -17,6 +17,7 @@ router.register(r'sales', SaleViewSet, basename='sale') # <-- Línea agregada
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
+    path('api/v1/login/', login_view, name='api_login'),
     
     # Endpoints de la documentación
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

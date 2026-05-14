@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     # Dependencias de terceros
     'rest_framework',
+    'rest_framework.authtoken',
     
     # Estos son los micromodulos
     'catalog',
