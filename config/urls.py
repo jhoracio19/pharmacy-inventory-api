@@ -6,11 +6,13 @@ from rest_framework.routers import DefaultRouter
 from catalog.views import MedicineViewSet
 from inventory.views import StockViewSet
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from sales.views import SaleViewSet
 
 # Enrutador automático de DRF
 router = DefaultRouter()
 router.register(r'medicines', MedicineViewSet, basename='medicine')
 router.register(r'stock', StockViewSet, basename='stock')
+router.register(r'sales', SaleViewSet, basename='sale') # <-- Línea agregada
 
 urlpatterns = [
     path('admin/', admin.site.urls),
